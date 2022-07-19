@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require("discord.js");
-var config = require("../config.json");
+require('dotenv').config();
+const prefix = process.env.PREFIX;
 const client = require("..");
-const prefix = config.prefix;
 
 client.on("messageCreate", async (message) => {
   if (!message.guild) return;
