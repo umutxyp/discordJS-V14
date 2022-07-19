@@ -1,4 +1,4 @@
-const {EmbedBuilder} = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 exports.run = async (client, message, args) => {
 

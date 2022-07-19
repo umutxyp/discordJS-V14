@@ -3,8 +3,7 @@ Client,
 GatewayIntentBits,
 Partials,
 } = require("discord.js");
-const config = require("./config.json");
-const token = config.token;
+require('dotenv').config()
 
 const client = new Client({
 partials: [
@@ -40,4 +39,4 @@ module.exports = client;
 
 require("./events/message.js")
 require("./events/ready.js")
-client.login(token); 
+client.login(process.env.TOKEN); 
