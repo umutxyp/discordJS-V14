@@ -38,6 +38,15 @@ GatewayIntentBits.MessageContent, // enable if you need message content things
 
 module.exports = client;
 
-require("./events/message.js")
-require("./events/ready.js")
+fs.readdir("./events", (_err, files) => {
+files.forEach((file) => {
+if (!file.endsWith(".js")) return;
+const event = require(`./events/${file}`);
+let eventName = file.split(".")[0];
+console.log(`👌 Loadded Event: ${eventName}`);
+client.on(eventName, event.bind(null, client));
+delete require.cache[require.resolve(`./events/${file}`)];
+});
+});
+
 client.login(token); 
