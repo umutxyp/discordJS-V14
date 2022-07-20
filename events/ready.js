@@ -1,8 +1,7 @@
-const client = require("../index");
 const { Collection } = require("discord.js")
 const fs = require("fs")
 
-client.on("ready", () => {
+module.exports = async (client) => {
 console.log(`${client.user.tag} Bot Online!`)
 client.user.setActivity(`Umut Bayraktar ♥ Code Share`)
 
@@ -23,4 +22,4 @@ client.aliases.set(alias, props.help.name);
 });
 });
 
-});
+}
