@@ -1,9 +1,7 @@
-const { EmbedBuilder } = require("discord.js");
 var config = require("../config.json");
-const client = require("..");
 const prefix = config.prefix;
 
-client.on("messageCreate", async (message) => {
+module.exports = async (client, message) => {
   if (!message.guild) return;
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
