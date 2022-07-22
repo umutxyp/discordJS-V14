@@ -1,6 +1,5 @@
-const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js");
+const { Client, GatewayIntentBits, Partials } = require("discord.js");
 const config = require("./config.js");
-const fs = require("fs")
 
 const client = new Client({
   partials: [
@@ -34,32 +33,8 @@ const client = new Client({
 
 module.exports = client;
 
-fs.readdir("./events", (_err, files) => {
-  files.forEach((file) => {
-    if (!file.endsWith(".js")) return;
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    console.log(`👌 Loadded Event: ${eventName}`);
-    client.on(eventName, event.bind(null, client));
-    delete require.cache[require.resolve(`./events/${file}`)];
-  });
-});
-
-client.commands = new Collection();
-client.aliases = new Collection();
-fs.readdir("./commands/", (err, files) => {
-  if (err) console.error(err);
-  console.log(`${files.length} Total Command!`);
-  files.forEach(f => {
-    let props = require(`./commands/${f}`);
-    console.log(`${props.help.name} Named Command Online!`);
-    client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
-      client.aliases.set(alias, props.help.name);
-    });
-  });
-});
-
+require("./events/message.js")
+require("./events/ready.js")
 
 client.login(config.token || process.env.TOKEN).catch(e => {
 console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
