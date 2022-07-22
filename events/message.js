@@ -1,4 +1,4 @@
-var config = require("../config.json");
+var config = require("../config.js");
 const prefix = config.prefix;
 
 module.exports = async (client, message) => {
