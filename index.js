@@ -3,7 +3,7 @@ Client,
 GatewayIntentBits,
 Partials,
 } = require("discord.js");
-const config = require("./config.json");
+const config = require("./config.js");
 const token = config.token;
 
 const client = new Client({
