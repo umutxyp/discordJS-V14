@@ -4,7 +4,7 @@ GatewayIntentBits,
 Partials,
 } = require("discord.js");
 const config = require("./config.js");
-const token = config.token;
+const fs = require("fs")
 
 const client = new Client({
 partials: [
@@ -49,4 +49,6 @@ delete require.cache[require.resolve(`./events/${file}`)];
 });
 });
 
-client.login(token); 
+client.login(config.token || process.env.TOKEN).catch(e => {
+console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
+})
