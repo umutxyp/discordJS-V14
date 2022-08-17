@@ -39,3 +39,12 @@ require("./events/ready.js")
 client.login(config.token || process.env.TOKEN).catch(e => {
 console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
 })
+
+
+const express = require("express");
+const app = express();
+const http = require("http");
+app.get("/", (request, response) => {
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
