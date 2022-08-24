@@ -1,7 +1,7 @@
 {
-  "name": "discordjs-13",
-  "version": "4.0.0",
-  "description": "Discord bot draft that does not contain ready-made commands, compatible with discord.js v13. Create your own discord bot with this command handler.",
+  "name": "discordjs-14",
+  "version": "5.0.0",
+  "description": "Discord bot draft that does not contain ready-made commands, compatible with discord.js v14. Create your own discord bot with this command handler.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
