@@ -7,7 +7,7 @@ client.on("messageCreate", async (message) => {
   if (!message.guild) return;
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
-  let command = message.content.split(" ")[0].slice(prefix.length);
+  let command = message.content.toLocaleLowerCase().split(" ")[0].slice(prefix.length);
   let params = message.content.split(" ").slice(1);
   let cmd;
   if (client.commands.has(command)) {
