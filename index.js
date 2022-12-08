@@ -40,7 +40,7 @@ client.login(config.token || process.env.TOKEN).catch(e => {
 console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bot's INTENTS Are OFF!")
 })
 
-
+client.login(token );
 const express = require("express");
 const app = express();
 const http = require("http");
