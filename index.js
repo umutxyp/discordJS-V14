@@ -47,4 +47,4 @@ const http = require("http");
 app.get("/", (request, response) => {
   response.sendStatus(200);
 });
-app.listen(process.env.PORT);
+app.listen(process.env.s!);
