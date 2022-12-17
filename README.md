@@ -6,6 +6,10 @@ MY DISCORD: https://discord.gg/Fy4WmSThRZ<br>
 YOUTUBE: https://discord.gg/Fy4WmSThRZ<br>
 <hr>
 Follow Me Social Media<br>
-Facebook: https://facebook.com/umutxyp/<br>
-Instagram: https://instagram.com/umutxyp/<br>
-Github: https://github.com/umutxyp/<br>
+Twitch Yayınları: https://twitch.com/umutxyp
+Github: https://github.com/umutxyp
+Instagram: https://instagram.com/umutxyp
+Twitter: https://twitter.com/devbayraktar
+Facebook: https://facebook.com/umutxyp
+Pinterest: https://pinterest.com/umutxyp
+TikTok: https://www.tiktok.com/@umutxyp
