@@ -2,7 +2,8 @@ const client = require("../index");
 const { Collection } = require("discord.js")
 const fs = require("fs")
 
-client.on("ready", () => {
+// "clientReady" is the name of this event since discord.js 14.22 ("ready" is deprecated).
+client.once("clientReady", () => {
 console.log(`${client.user.tag} Bot Online!`)
 client.user.setActivity(`Umut Bayraktar ♥ Code Share`)
 

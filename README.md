@@ -26,8 +26,15 @@ A professional, modular, and scalable command handler template for Discord bots 
 └── package.json    # Dependencies
 ```
 
+## ✅ Requirements
+- [Node.js](https://nodejs.org/) **20 or newer**
+- A bot token from the [Discord Developer Portal](https://discord.com/developers/applications), with the **Message Content** intent switched on (the template reads message text)
+
 ## ⚙️ Installation
 1. Clone the repository: `git clone https://github.com/umutxyp/discordJS-V14.git`
 2. Install dependencies: `npm install`
 3. Configure `config.js` with your bot token and prefix.
 4. Run the bot: `node index.js`
+
+## 🔎 Looking for more?
+This is the smallest possible starting point: prefix commands only. For slash commands, buttons, cooldowns, permissions and a logger, see [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot).

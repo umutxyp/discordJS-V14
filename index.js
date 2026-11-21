@@ -14,8 +14,8 @@ const client = new Client({
   intents: [
     GatewayIntentBits.Guilds, // for guild related things
     GatewayIntentBits.GuildMembers, // for guild members related things
-    GatewayIntentBits.GuildBans, // for manage guild bans
-    GatewayIntentBits.GuildEmojisAndStickers, // for manage emojis and stickers
+    GatewayIntentBits.GuildModeration, // for bans, kicks and timeouts
+    GatewayIntentBits.GuildExpressions, // for emojis, stickers and soundboard sounds
     GatewayIntentBits.GuildIntegrations, // for discord Integrations
     GatewayIntentBits.GuildWebhooks, // for discord webhooks
     GatewayIntentBits.GuildInvites, // for guild invite managing
@@ -41,10 +41,10 @@ console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bo
 })
 
 
+// A small web server so hosts that expect one (Replit, Render, …) keep the bot running.
 const express = require("express");
 const app = express();
-const http = require("http");
 app.get("/", (request, response) => {
   response.sendStatus(200);
 });
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000);
